@@ -224,6 +224,7 @@ img {
 .portfolio-card {
   border: 1px solid #e7e9fc;
   border-top: none;
+  padding: 32px 16px;
 }
 .section-list-item-portfolio img,
 .section-list-item img {
@@ -232,9 +233,6 @@ img {
 }
 .section-list-item-content {
   padding: 32px 0px;
-}
-.section-list-portfolio .section-list-item-content {
-  padding: 32px 16px;
 }
 .section-title {
   text-align: center;
