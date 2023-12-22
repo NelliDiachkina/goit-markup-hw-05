@@ -378,10 +378,11 @@ img {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 16px;
   padding: 8px 24px;
+  min-width: 165px;
 }
 .subscribe-form-icon {
+  margin-left: 16px;
   fill: currentColor;
 }
 .backdrop {
@@ -415,6 +416,7 @@ img {
   padding-top: 72px;
   box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12),
     0px 2px 1px 0px rgba(0, 0, 0, 0.2);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .modal-btn {
   position: absolute;
@@ -429,18 +431,20 @@ img {
   color: #2e2f42;
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 50%;
+  padding: 0;
   cursor: pointer;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    color 250ms cubic-bezier(0.4, 0, 0.2, 1), border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .modal-btn:hover,
 .modal-btn:focus {
   background-color: #404bbf;
+  border: none;
   color: #ffffff;
-  border-color: #404bbf;
 }
 .modal-btn-icon {
   fill: currentColor;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .modal-title {
   text-align: center;
@@ -469,10 +473,12 @@ img {
 .form-input-container {
   position: relative;
   color: #2e2f42;
+}
+.form-field {
   margin-bottom: 8px;
 }
-.form-field-accept {
-  margin-top: 16px;
+.modal-form .form-field:nth-child(4) {
+  margin-bottom: 16px;
 }
 .input-icon {
   position: absolute;
@@ -505,33 +511,34 @@ img {
   color: rgba(46, 47, 66, 0.4);
   overflow: hidden;
   resize: none;
+  padding: 8px 16px;
+}
+.form-field-accept {
+  margin-bottom: 24px;
 }
 .form-btn {
-  margin: 24px auto 0 auto;
+  margin: 0 auto;
 }
 .footer-checkbox-link {
   color: #4d5ae5;
   text-decoration-line: underline;
 }
 .checkbox-icon-span {
-  width: 16px;
-  height: 16px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  width: 16px;
+  height: 16px;
   background-color: transparent;
-  color: transparent;
+  fill: transparent;
   border: 1px solid rgba(46, 47, 66, 0.4);
   border-radius: 2px;
   cursor: pointer;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    border 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    border 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .footer-checkbox:checked + .form-label-accept .checkbox-icon-span {
-  color: #f4f4fd;
+  fill: #f4f4fd;
   background-color: #404bbf;
   border: none;
-}
-.checkbox-checked-icon {
-  fill: currentColor;
 }
