@@ -465,11 +465,6 @@ img {
   display: block;
   margin-bottom: 4px;
 }
-.form-label-accept {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-}
 .form-input-container {
   position: relative;
   color: #2e2f42;
@@ -522,6 +517,11 @@ img {
 .footer-checkbox-link {
   color: #4d5ae5;
   text-decoration-line: underline;
+}
+.form-label-accept {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
 }
 .checkbox-icon-span {
   display: inline-flex;
